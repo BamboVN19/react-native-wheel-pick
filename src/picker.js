@@ -93,7 +93,7 @@ export default class Picker extends Component {
             key={index}
             value={typeof data.value !== 'undefined' ? data.value : data.toString()}
             label={typeof data.label !== 'undefined' ? data.label : data.toString()}
-            color={this.state.selectedValue === (typeof data.value !== 'undefined' ? data.value : data.toString()) ? props.textColor1 : props.textColor}
+            color={this.state.selectedValue.toString() === (typeof data.value !== 'undefined' ? data.value.toString() : data.toString()) ? props.textColor1 : props.textColor}
           />
         ))}
       </WheelCurvedPicker>
